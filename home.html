@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KWA SAM CAFE - The Place to Be</title>
+  <style>
+    body {
+      background-color: red;
+    }
+
+    h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: white;
+      text-align: center;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Adjusted to create space for the signup and login links */
+    }
+
+    .logo {
+      margin-right: 20px;
+    }
+
+    .logo img {
+      max-width: 100%;
+      height: 100px;
+    }
+
+    .header-content {
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: gold;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .navbar .menu-icon:before {
+      content: "\2261";
+    }
+
+    .navbar .nav-items {
+      display: none;
+    }
+
+    .navbar .nav-items ul {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    .navbar .nav-items ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navbar .nav-items ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .signup-link, .login-link {
+      background-color: #FF6666;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-link {
+      margin-left: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar .menu-icon {
+        display: none;
+      }
+
+      .navbar .nav-items {
+        display: block;
+      }
+    }
+
+    section {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    section img {
+      display: block;
+      margin-bottom: 10px;
+      max-width: 300px;
+      height: auto;
+    }
+
+    section .caption {
+      text-align: center;
+    }
+
+    #contact {
+      background-color: lightgray;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #drinks {
+      background-color: #FF6666;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #drinks h3 {
+      margin-bottom: 10px;
+    }
+
+    #drinks p {
+      margin-bottom: 20px;
+    }
+
+    #drinks .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #contact h3 {
+      margin-bottom: 10px;
+    }
+
+    #contact p {
+      margin-bottom: 20px;
+    }
+
+    #contact .contact-info {
+      display: flex;
+      justify-content: center;
+    }
+
+    #contact .contact-item {
+      margin-right: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="kwasam.jpg" alt="KWA SAM CAFE" style="max-width: 100%;">
+    </div>
+    <div class="header-content">
+      <h1>KWA SAM CAFE</h1>
+      <h2>The Place to Be</h2>
+    </div>
+    <div class="header-links">
+      <a href="signup.html" class="signup-link">Sign Up</a>
+      <a href="login.html" class="login-link">Login</a>
+    </div>
+  </header>
+
+  <div class="navbar">
+    <div class="menu-icon" onclick="toggleNavItems()">&#9776;</div>
+    <div class="nav-items" id="navItems">
+      <ul>
+        <li><a href="#home">Foods</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+        <li><a href="#contact">Contacts</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="home">
+    <h3>Welcome to KWA SAM CAFE</h3>
+    <p>This is the wide variety of delicious foods. Do not worry. You can make your order and it will be delivered to you. Just contact us.</p>
+
+    <div class="gallery">
+      <figure>
+        <img src="rice.jpeg" alt="PILAU">
+        <figcaption class="caption">Delicious Pilau</figcaption>
+      </figure>
+
+      <figure>
+        <img src="beef.jpeg" alt="NYAMA">
+        <figcaption class="caption">Tasty Nyama Choma</figcaption>
+      </figure>
+
+      <figure>
+        <img src="njahi.jpeg" alt="NJAHI">
+        <figcaption class="caption">Nutritious Njahi</figcaption>
+      </figure>
+
+      <figure>
+        <img src="ndengu.jpeg" alt="NDENGU">
+        <figcaption class="caption">Flavorful Ndengu</figcaption>
+      </figure>
+
+      <figure>
+        <img src="mukimo.jpeg" alt="MUKIMO">
+        <figcaption class="caption">Savory Mukimo</figcaption>
+      </figure>
+
+      <figure>
+        <img src="matumbo.jpeg" alt="Drink 2">
+        <figcaption class="caption">Well Cooked Matumbo</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="drinks">
+    <h3>Refreshing Drinks</h3>
+    <p>Quench your thirst with our wide selection of refreshing drinks.</p>
+
+    <div class="gallery">
+      <!-- Add your drink images and captions here -->
+      <figure>
+        <img src="soda.jpeg" alt="Drink 1">
+        <figcaption class="caption">All sodas from the Coca-Cola company</figcaption>
+      </figure>
+
+      <figure>
+        <img src="pepsi.jpeg" alt="Drink 2">
+        <figcaption class="caption">Pepsi</figcaption>
+      </figure>
+
+      <figure>
+        <img src="mountain.jpeg" alt="Drink 3">
+        <figcaption class="caption">The Sweet Mountain Dew</figcaption>
+      </figure>
+
+      <figure>
+        <img src="water.jpeg" alt="Drink 4">
+        <figcaption class="caption">Clean Bottled Water</figcaption>
+      </figure>
+      <!-- Add more drink images and captions as needed -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <p>For orders and inquiries, please feel free to reach out to us:</p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <h4>Phone</h4>
+        <p>Call or WhatsApp: <a href="tel:+254722161924">0722161924</a></p>
+      </div>
+
+      <div class="contact-item">
+        <h4>Email</h4>
+        <p>Email us at: <a href="samuelspride@gmail.com">samuelspride@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleNavItems() {
+      var navItems = document.getElementById("navItems");
+      if (navItems.style.display === "block") {
+        navItems.style.display = "none";
+      } else {
+        navItems.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
